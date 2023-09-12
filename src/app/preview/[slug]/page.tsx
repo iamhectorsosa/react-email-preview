@@ -1,6 +1,6 @@
+import { promises as fs } from "fs";
 import * as React from "react";
 import { render } from "@react-email/render";
-import { promises as fs } from "fs";
 import { getEmails } from "../../../utils/get-emails";
 import Preview from "./preview";
 

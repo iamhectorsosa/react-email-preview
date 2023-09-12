@@ -4,13 +4,15 @@ type LogoElement = React.ElementRef<'svg'>;
 type RootProps = React.ComponentPropsWithoutRef<'svg'>;
 
 export const Logo = React.forwardRef<LogoElement, Readonly<RootProps>>(
-  ({ ...props }, forwardedRef) => (
+  ({ ...props }, forwardRef) => (
     <svg
       width="119"
       height="32"
       viewBox="0 0 119 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      ref={forwardRef}
+      {...props}
     >
       <g clipPath="url(#clip0_27_291)">
         <path

@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-export interface IconProps {
-  size?: number;
-}
-
 export type IconElement = React.ElementRef<'svg'>;
 export type RootProps = React.ComponentPropsWithoutRef<'svg'>;
 
-export interface IconProps extends RootProps {}
+export interface IconProps extends RootProps {
+  size?: number;
+}
 
 export const IconBase = React.forwardRef<IconElement, Readonly<IconProps>>(
   ({ size = 20, ...props }, forwardedRef) => (
